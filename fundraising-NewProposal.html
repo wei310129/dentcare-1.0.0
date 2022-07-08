@@ -37,7 +37,7 @@
 <body>
     <!--注意順序-->
     <!--用javascript引入header-->
-    <script src="./js/header.js"></script>
+    <div class="header">header</div>
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
@@ -61,10 +61,10 @@
     <div class="container-fluid bg-primary py-5 hero-header mb-5">
         <div class="row py-3">
             <div class="col-12 text-center">
-                <h1 class="display-3 text-white animated zoomIn">Appointment</h1>
-                <a href="" class="h4 text-white">Home</a>
+                <h1 class="display-3 text-white animated zoomIn">我要提案</h1>
+                <!-- <a href="" class="h4 text-white">Home</a>
                 <i class="far fa-circle text-white px-2"></i>
-                <a href="" class="h4 text-white">Appointment</a>
+                <a href="" class="h4 text-white">Appointment</a> -->
             </div>
         </div>
     </div>
@@ -74,56 +74,158 @@
     <div class="container-fluid bg-primary bg-appointment mb-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: 90px;">
         <div class="container">
             <div class="row gx-5">
-                <div class="col-lg-6 py-5">
+                <div class="col-lg-3 py-5">
                     <div class="py-5">
-                        <h1 class="display-5 text-white mb-4">We Are A Certified and Award Winning Dental Clinic You Can Trust</h1>
-                        <p class="text-white mb-0">Eirmod sed tempor lorem ut dolores. Aliquyam sit sadipscing kasd ipsum. Dolor ea et dolore et at sea ea at dolor, justo ipsum duo rebum sea invidunt voluptua. Eos vero eos vero ea et dolore eirmod et. Dolores diam duo invidunt lorem. Elitr ut dolores magna sit. Sea dolore sanctus sed et. Takimata takimata sanctus sed.</p>
+                        <h1 class="display-6 text-white mb-4">您的提案將會成為最閃亮的一顆星</h1>
+                        <p class="text-white mb-0">透過本平台的專案服務，只要您提出您的提案，我們將竭誠協助您打造完整的專案並上架</p>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-9">
                     <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn" data-wow-delay="0.6s">
-                        <h1 class="text-white mb-4">Make Appointment</h1>
+                        <!-- <h1 class="text-white mb-4">我要提案</h1> -->
+                        <!-- <div class="row g-2" style="max-width: 500px;"> -->
+                            <div style="margin-bottom: 10px; text-align: left;">
+                                <span class="text-white mb-4 h3" style="display: inline;">填寫表單</span>
+                                <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                <span class="text-white mb-4 h6" style="display: inline;">為必填</span>
+                            </div>
                         <form>
-                            <div class="row g-3">
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select A Service</option>
-                                        <option value="1">Service 1</option>
-                                        <option value="2">Service 2</option>
-                                        <option value="3">Service 3</option>
-                                    </select>
+                            <div class="row g-2">
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">提案名稱：</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control bg-light border-0" placeholder="請輸入提案名稱" style="height: 55px;">
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
-                                    <select class="form-select bg-light border-0" style="height: 55px;">
-                                        <option selected>Select Doctor</option>
-                                        <option value="1">Doctor 1</option>
-                                        <option value="2">Doctor 2</option>
-                                        <option value="3">Doctor 3</option>
-                                    </select>
+
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">目標金額：</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control bg-light border-0" placeholder="請輸入目標金額" style="height: 55px;">
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
+                                  
+                                <!-- 選項樣板 -->
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">專案類別：</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <select class="form-select bg-light border-0" style="height: 55px;">
+                                            <option selected>請選擇專案類別</option>
+                                            <option value="1">潔牙物品</option>
+                                            <option value="2">牙齒矯治</option>
+                                            <option value="3">公益活動</option>
+                                            <option value="4">衛教出版</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-6">
+
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">開始日期：</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control bg-light border-0" placeholder="請選擇開始日期" style="height: 55px; ">
+                                    </div>
+                                </div>
+
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">結束日期：</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <input type="datetime-local" class="form-control bg-light border-0" style="cursor: pointer; padding: 15px;">
+                                    </div>
+                                </div>
+
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">電子郵件：</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <!-- <input type="data" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;"> -->
+                                        <input type="email" class="form-control bg-light border-0" placeholder="請輸入您的電子郵件" style="height: 55px;">
+                                    </div>
+                                </div>
+
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">手機號碼：</span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <!-- <input type="data" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;"> -->
+                                        <input type="tel" class="form-control bg-light border-0" placeholder="請輸入您的手機號碼" style="height: 55px;">
+                                    </div>
+                                </div>
+
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">專案摘要：<br>
+                                            <span class="h6 text-white">(50~400字)</span>
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <!-- <input type="data" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;"> -->
+                                        <textarea name="summary" class="form-control bg-light border-0" placeholder="內容摘要" style="padding-top: 15px;" rows="9" minlength="50" maxlength="400"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                        <span class="mb-4 h6" style="display: inline; color: red;">*</span>
+                                        <span class="h5 text-white">專案企劃書：</span>
+                                    </div>  
+                                    <div class="col-sm-9">
+                                        <label class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px; padding-right: 20px;">
+                                            <input type="file" style="display: none;">
+                                            <i class="fa-solid fa-paperclip fa-lg" style="padding-top: 15px; float: right;"></i>
+                                        </label>
+                                        <!-- <textarea name="summary" class="form-control bg-light border-0" placeholder="內容摘要" style="height: 55px;"> -->
+                                    </div>
+                                </div>
+
+                                <div class="row g-2">
+                                    <div class="col-sm-2" style="display: flex; align-items: center; min-width: 115px; padding-top: 8px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <button type="button" class="btn btn-primary py-2" style="display:inline-block">送出<i class="fa-solid fa-paper-plane"></i></button>
+                                    </div>
+                                </div>
+                                
+
+                                <!-- <div class="col-sm-6">
                                     <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
                                 </div>
-                                <div class="col-12 col-sm-6">
+                                <div class="col-sm-6">
                                     <div class="date" id="date1" data-target-input="nearest">
                                         <input type="text"
                                             class="form-control bg-light border-0 datetimepicker-input"
                                             placeholder="Appointment Date" data-target="#date1" data-toggle="datetimepicker" style="height: 55px;">
                                     </div>
-                                </div>
-                                <div class="col-12 col-sm-6">
+                                </div> -->
+                                <!-- <div class="col-sm-6">
                                     <div class="time" id="time1" data-target-input="nearest">
                                         <input type="text"
                                             class="form-control bg-light border-0 datetimepicker-input"
                                             placeholder="Appointment Time" data-target="#time1" data-toggle="datetimepicker" style="height: 55px;">
                                     </div>
                                 </div>
-                                <div class="col-12">
+                                <div>
                                     <button class="btn btn-dark w-100 py-3" type="submit">Make Appointment</button>
-                                </div>
+                                </div> -->
                             </div>
                         </form>
                     </div>
@@ -135,7 +237,7 @@
     
 
     <!-- Newsletter Start -->
-    <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
+    <!-- <div class="container-fluid position-relative pt-5 wow fadeInUp" data-wow-delay="0.1s" style="z-index: 1;">
         <div class="container">
             <div class="bg-primary p-5">
                 <form class="mx-auto" style="max-width: 600px;">
@@ -146,13 +248,13 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Newsletter End -->
     
 
     <!--注意順序-->
     <!--用javascript引入footer-->
-    <script src="./js/fotter.js"></script>
+    <div class="fotter">fotter</div>
 
 
     <!-- Back to Top -->
@@ -171,6 +273,15 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
     <script src="lib/twentytwenty/jquery.event.move.js"></script>
     <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+
+    <!-- 外部參考 header, footer -->
+    <script type="text/javascript">
+        //在js中引入
+        // $(document).ready(function () {
+        $('div.header').load('./referenceHTML/header.html');
+        $('div.fotter').load('./referenceHTML/fotter.html');
+        // });
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
