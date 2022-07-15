@@ -1,8 +1,9 @@
-thead th{
+td.column{
     border: 1px solid black;
     color: black;
     background-color: antiquewhite;
     font-size: medium;
+    font-weight: bold;
 }
 tbody td.text-title{
     border: 1px solid black;

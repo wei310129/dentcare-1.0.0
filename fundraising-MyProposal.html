@@ -33,6 +33,27 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/fundrasing.css" rel="stylesheet">
+
+    <style>
+        .lightbox {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00000066;
+            z-index: -1;
+            opacity: 0;
+        }
+        .lightbox:target {
+            z-index: 1;
+            opacity: 1;
+            transition: 0.5s;
+        }
+    </style>
 </head>
 
 <body>
@@ -94,28 +115,69 @@
                                 </select>
                             </form>
                         </div>
+
                         <table>
                             <thead>
                                 <tr>
-                                    <th>專案名稱</th>
-                                    <th style="width: 70px;">募資進度</th>
-                                    <th style="width: 70px;">出貨進度</th>
-                                    <th style="width: 110px;">預計出貨時間</th>
-                                    <th style="width: 80px;">單價</th>
-                                    <th style="width: 110px;">已售數量</th>
-                                    <th style="width: 140px;">已售金額</th>
+                                    <td class="column">提案名稱</td>
+                                    <td class="column" style="width: 90px;">開始時間</td>
+                                    <td class="column" style="width: 90px;">結束時間</td>
+                                    <td class="column" style="width: 140px;">日數</td>
+                                    <!-- <th style="width: 140px;">已售金額</th> -->
+                                    <!-- <th style="width: 90px;">募資進度</th> -->
+                                    <!-- <th style="width: 140px;">已售金額</th> -->
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="text-title">
-                                        <i class="fa-solid fa-pen"></i>
-                                        <a href="propsal-page1.html">┃ SmartMi P1空氣清淨機┃小資族的空氣增質學</a></td>
-                                    <td class="td-empty" colspan="6"></td>
+                                    <td class="text-title" rowspan="3">
+                                        <a href="javascript:void(0);">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </a>
+                                        <a href="propsal-page1.html">SmartMi P1空氣清淨機┃小資族的空氣增質學</a>
+                                    </td>
+                                    <td>2022/04/01 00:00</td>
+                                    <td>2022/08/01 00:00</td>
+                                    <td>122天</td>
+                                    <!-- <td>750,000</td> -->
+                                    <!-- <td>250%</td> -->
                                 </tr>
                                 <tr>
+                                    <!-- <td></td> -->
+                                    <!-- <th style="width: 90px;">開始時間</th> -->
+                                    <!-- <th style="width: 90px;">結束時間</th> -->
+                                    <td class="column" style="width: 140px;">目標金額</td>
+                                    <td class="column" style="width: 140px;">已售金額</td>
+                                    <td class="column" style="width: 140px;">募資進度</td>
+                                    <!-- <th style="width: 140px;">已售金額</th> -->
+                                </tr>
+                                <tr>
+                                    <!-- <td></td> -->
+                                    <td>300,000</td>
+                                    <td>750,000</td>
+                                    <td>250%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table style="margin-top: 10px;">
+                            <thead>
+                                <tr>
+                                    <td class="column">贊助方案名稱</td>
+                                    <td class="column" style="width: 100px;">募資進度</td>
+                                    <td class="column" style="width: 70px;">出貨進度</td>
+                                    <td class="column" style="width: 110px;">預計出貨時間</td>
+                                    <td class="column" style="width: 90px;">單價</thd>
+                                    <td class="column" style="width: 80px;">已售數量</td>
+                                    <td class="column" style="width: 140px;">已售金額</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
                                     <td class="text-project">
-                                        <i class="fa-solid fa-pen"></i>
+                                        <a href="javascript:void(0);">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </a>
                                         <a href="propsal-page1.html">基礎贊助包</a></td>
                                     <td>募資中</td>
                                     <td>無回饋</td>
@@ -126,8 +188,10 @@
                                 </tr>
                                 <tr>
                                     <td class="text-project">
-                                        <i class="fa-solid fa-pen"></i>
-                                        <a href="propsal-page1.html">耗材包 ｜ 過濾濾心包 x1</a></td>
+                                        <a href="javascript:void(0);">
+                                            <i class="fa-solid fa-pen"></i>
+                                        </a>
+                                        <a href="propsal-page1.html">耗材包┃過濾濾心包 x1</a></td>
                                     <td>已結束</td>
                                     <td>出貨中</td>
                                     <td>2022/09/05</td>
@@ -136,10 +200,10 @@
                                     <td>50,000</td>
                                 </tr>
                                 <tr class="summary">
-                                    <td style="text-align: center; font-weight: bold;">合計</td>
+                                    <td class="column">合計</td>
                                     <td colspan="5"></td>
                                     <!-- <td></td> -->
-                                    <td style="font-weight: bold;">53,000</td>
+                                    <td class="column">53,000</td>
                                 </tr>
                                 
                             </tbody>
@@ -151,6 +215,12 @@
     </div>
     <!-- Newsletter End -->
     
+    <!-- <a href="javascript:void(0);" class="lightbox" id="Rn1Zji" target="_blank"> -->
+        <!-- <div style="background-color: white; width: 400px; height: 400px;"> -->
+            <!-- dfsfsfdsf -->
+        <!-- </div> -->
+
+    <!-- </a> -->
 
     <!--注意順序-->
     <!--用javascript引入footer-->
